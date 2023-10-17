@@ -39,7 +39,7 @@ const NAV_ITEMS: Array<NavItem> = [
       },
       {
         label: 'Content',
-        href: '/all/Content/',
+        href: '/content/',
       },
       {
         label: 'Frontend',

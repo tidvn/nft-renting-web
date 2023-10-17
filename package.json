@@ -23,6 +23,7 @@
     "next-seo": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-youtube": "^10.1.0",
     "sass": "latest"
   },
   "devDependencies": {
