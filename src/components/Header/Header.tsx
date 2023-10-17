@@ -24,9 +24,7 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: 'All Opportunities',
-    children: [
+ 
       {
         label: 'All Opportunities',
         href: '/',
@@ -59,9 +57,7 @@ const NAV_ITEMS: Array<NavItem> = [
         label: 'HYPERDRIVE',
         href: '/all/Hyperdrive/',
       },
-    ],
-  },
-];
+    ]
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
@@ -139,7 +135,6 @@ const MobileNav = () => (
     {NAV_ITEMS.map((navItem) => (
       <MobileNavItem key={navItem.label} {...navItem} />
     ))}
-    {/* <UserInfo /> */}
   </Stack>
 );
 
@@ -148,7 +143,7 @@ const DesktopNav = () => {
 
   return (
     <Stack direction={'row'} h="full" spacing={8}>
-      {NAV_ITEMS[0]?.children?.map((navItem) => {
+      {NAV_ITEMS.map((navItem) => {
         const isCurrent = `${navItem.href}` === router.asPath;
         return (
           <Box key={navItem.label}>
