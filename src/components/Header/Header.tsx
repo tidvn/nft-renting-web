@@ -113,6 +113,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                 {child.label === 'HYPERDRIVE' ? (
                   <Image
                     w={100}
+                    alt='Hyperdrive'
                     src="/assets/category_assets/icon/Hyperdrive.svg"
                   />
                 ) : (
@@ -159,7 +160,7 @@ const DesktopNav = () => {
                   h="full"
                   py={2}
                   color={isCurrent ? 'brand.slate.800' : 'brand.slate.500'}
-                  fontSize={'sm'}
+                  fontSize={'md'}
                   fontWeight={isCurrent ? 500 : 400}
                   borderBottom="1px solid"
                   borderBottomColor={isCurrent ? 'brand.purple' : 'transparent'}
@@ -171,6 +172,7 @@ const DesktopNav = () => {
                 >
                   {navItem.label === 'HYPERDRIVE' ? (
                     <Image
+                    alt='Hyperdrive'
                       src="/assets/category_assets/icon/Hyperdrive.svg"
                       // style={{
                       //   scale: '1.1',
@@ -220,14 +222,14 @@ export default function WithSubnavigation() {
         </Flex>
         <Flex align="center" justify={{ base: 'center', md: 'start' }}>
           <Image
-            h={100}
+            h={5}
             cursor="pointer"
             objectFit={'contain'}
             alt={'Superteam Earn'}
             onClick={() => {
               router.push('/');
             }}
-            src={'/images/logo/vector/default.svg'}
+            src={'/images/logo/default.png'}
           />
           {/* <Flex
             align="center"
