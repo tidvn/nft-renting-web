@@ -23,6 +23,7 @@
     "next-seo": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-icons": "^4.11.0",
     "react-youtube": "^10.1.0",
     "sass": "latest"
   },

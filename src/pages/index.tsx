@@ -2,7 +2,8 @@ import { Image, Text, VStack } from '@chakra-ui/react';
 
 import { Default } from '@/layouts/Default';
 import { Meta } from '@/layouts/Meta';
-import CallToActionWithVideo from '../components/Landing/Hero'
+import Hero from '@/components/Landing/Hero'
+import Featured from '@/components/Landing/Featured';
 export default function Custom404() {
   return (
     <>
@@ -11,8 +12,9 @@ export default function Custom404() {
           <Meta title="NFT" description="" />
         }
       >
-        <CallToActionWithVideo/>
-        
+        <Hero/>
+        <Featured/>
+
       </Default>
     </>
   );

@@ -24,40 +24,40 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
- 
-      {
-        label: 'All Opportunities',
-        href: '/',
-      },
-      {
-        label: 'Design',
-        href: '/all/Design/',
-      },
-      {
-        label: 'Growth',
-        href: '/all/Growth/',
-      },
-      {
-        label: 'Content',
-        href: '/content/',
-      },
-      {
-        label: 'Frontend',
-        href: '/all/Frontend/',
-      },
-      {
-        label: 'Backend',
-        href: '/all/Backend/',
-      },
-      {
-        label: 'Blockchain',
-        href: '/all/Blockchain/',
-      },
-      {
-        label: 'HYPERDRIVE',
-        href: '/all/Hyperdrive/',
-      },
-    ]
+
+  {
+    label: 'All Opportunities',
+    href: '/',
+  },
+  {
+    label: 'Design',
+    href: '/all/Design/',
+  },
+  {
+    label: 'Growth',
+    href: '/all/Growth/',
+  },
+  {
+    label: 'Content',
+    href: '/content/',
+  },
+  {
+    label: 'Frontend',
+    href: '/all/Frontend/',
+  },
+  {
+    label: 'Backend',
+    href: '/all/Backend/',
+  },
+  {
+    label: 'Blockchain',
+    href: '/all/Blockchain/',
+  },
+  {
+    label: 'HYPERDRIVE',
+    href: '/all/Hyperdrive/',
+  },
+]
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
@@ -227,6 +227,7 @@ export default function WithSubnavigation() {
 
           <Flex
             align="center"
+            justify="center" // Đặt giữa theo cả chiều ngang và chiều dọc
             display={{ base: 'none', md: 'flex' }}
             h="full"
             ml={10}

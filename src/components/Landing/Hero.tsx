@@ -38,9 +38,9 @@ const YouTubePlayer = ({ videoId }:any) => {
     />
   );
 };
-export default function CallToActionWithVideo() {
+export default function Hero() {
   return (
-    <Container maxW={'7xl'}>
+    
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
@@ -112,12 +112,10 @@ export default function CallToActionWithVideo() {
             overflow={'hidden'}
             >
            
-           <YouTubePlayer videoId="cR7odgQWITE" />
-            
+            <YouTubePlayer videoId="cR7odgQWITE" />
           </Box>
         </Flex>
       </Stack>
-    </Container>
   )
 }
 
