@@ -165,17 +165,7 @@ const DesktopNav = () => {
                   }}
                   href={navItem.href ?? '#'}
                 >
-                  {navItem.label === 'HYPERDRIVE' ? (
-                    <Image
-                    alt='Hyperdrive'
-                      src="/assets/category_assets/icon/Hyperdrive.svg"
-                      // style={{
-                      //   scale: '1.1',
-                      // }}
-                    />
-                  ) : (
-                    navItem.label
-                  )}
+                  {navItem.label}
                 </Link>
               </PopoverTrigger>
             </Popover>
