@@ -7,15 +7,15 @@ import Featured from '@/components/Landing/Featured';
 export default function Custom404() {
   return (
     <>
-      <Default
+      {/* <Default
         meta={
           <Meta title="NFT" description="" />
         }
-      >
-        <Hero/>
-        <Featured/>
+      > */}
+      <Hero />
+      <Featured />
 
-      </Default>
+      {/* </Default> */}
     </>
   );
 }

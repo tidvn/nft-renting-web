@@ -19,12 +19,24 @@ import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import theme from '../config/chakra.config';
 
+import { Default } from '@/layouts/Default';
+import { Meta } from '@/layouts/Meta';
+import { SigningClientProvider } from '../contexts/client';
+
 function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
       <ChakraProvider theme={theme}>
-              <Component {...pageProps} />
+        <SigningClientProvider>
+          <Default
+            meta={
+              <Meta title="NFT" description="" />
+            }
+          >
+            <Component {...pageProps} />
+          </Default>
+        </SigningClientProvider>
       </ChakraProvider>
     </>
   );
