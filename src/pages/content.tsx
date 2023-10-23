@@ -11,8 +11,6 @@ export default function Custom404() {
           <Meta title="NFT" description="" />
         }
       >
-       hello
-        
       </Default>
     </>
   );

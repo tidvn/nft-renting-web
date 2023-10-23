@@ -5,17 +5,19 @@ import {
   Flex,
   IconButton,
   Image,
-  Link,
   Popover,
   PopoverTrigger,
   Stack,
   Text,
   useColorModeValue,
   useDisclosure,
+  // Link,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
+import Link from 'next/link'
 
 import UserInfo from './UserInfo';
+import { Url } from 'next/dist/shared/lib/router/router';
 
 interface NavItem {
   label: string;
@@ -30,33 +32,33 @@ const NAV_ITEMS: Array<NavItem> = [
     href: '/',
   },
   {
-    label: 'Design',
-    href: '/all/Design/',
+    label: 'Marketplace',
+    href: '/marketplace',
   },
   {
-    label: 'Growth',
-    href: '/all/Growth/',
+    label: 'Dashboard',
+    href: '/dashboard',
   },
-  {
-    label: 'Content',
-    href: '/content/',
-  },
-  {
-    label: 'Frontend',
-    href: '/all/Frontend/',
-  },
-  {
-    label: 'Backend',
-    href: '/all/Backend/',
-  },
-  {
-    label: 'Blockchain',
-    href: '/all/Blockchain/',
-  },
-  {
-    label: 'HYPERDRIVE',
-    href: '/all/Hyperdrive/',
-  },
+  // {
+  //   label: 'Content',
+  //   href: '/content/',
+  // },
+  // {
+  //   label: 'Frontend',
+  //   href: '/all/Frontend/',
+  // },
+  // {
+  //   label: 'Backend',
+  //   href: '/all/Backend/',
+  // },
+  // {
+  //   label: 'Blockchain',
+  //   href: '/all/Blockchain/',
+  // },
+  // {
+  //   label: 'HYPERDRIVE',
+  //   href: '/all/Hyperdrive/',
+  // },
 ]
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {
@@ -98,25 +100,20 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <Link
+
+              <Box
                 key={child.label}
                 mt={0}
                 py={1}
                 color={'brand.slate.800'}
                 fontSize="sm"
-                href={child.href}
+
               >
-                {child.label === 'HYPERDRIVE' ? (
-                  <Image
-                    w={100}
-                    alt='Hyperdrive'
-                    src="/assets/category_assets/icon/Hyperdrive.svg"
-                  />
-                ) : (
-                  child.label
-                )}
-                {/* {child.label} */}
-              </Link>
+                <Link href={child.href as Url}>
+                  {child.label}
+                </Link>
+              </Box>
+
             ))}
         </Stack>
       </Collapse>
@@ -149,7 +146,7 @@ const DesktopNav = () => {
           <Box key={navItem.label}>
             <Popover placement={'bottom-start'} trigger={'hover'}>
               <PopoverTrigger>
-                <Link
+                <Box
                   alignItems="center"
                   display="flex"
                   h="full"
@@ -163,10 +160,12 @@ const DesktopNav = () => {
                     textDecoration: 'none',
                     color: 'brand.slate.800',
                   }}
-                  href={navItem.href ?? '#'}
+                // href={navItem.href ?? '#'}
                 >
-                  {navItem.label}
-                </Link>
+                  <Link href={navItem.href ?? '#'}>
+                    {navItem.label}
+                  </Link>
+                </Box>
               </PopoverTrigger>
             </Popover>
           </Box>
